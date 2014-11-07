@@ -7,5 +7,5 @@ if [ "$#" -ne 1 ]; then
     exit 1
 fi
 
-curl http://wordpress.org/latest.tar.gz | tar -xvzf -
+curl -L http://wordpress.org/latest.tar.gz | tar -xvzf -
 mv wordpress $1 ; cp config/* $1 ;cd $1 ; fig up
